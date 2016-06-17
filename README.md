@@ -14,6 +14,7 @@
 1. Colors from: http://colours.neilorangepeel.com/
 2. Shapes from: http://www.w3schools.com/charsets/ref_utf_geometric.asp
 3. Favicon generated via: http://www.favicon-generator.org/
+4. Phone gap build: http://docs.build.phonegap.com/en_US/introduction_getting_started.md.html#Getting%20Started%20with%20Build
 
 ### To Do
 8. Test it on Chrome Desktop/iPad/Android/iPhone
@@ -25,6 +26,7 @@
 17. Imp - No screen lock mode (Android and IOS)
 18. Royalty + Credit free music
 20. Put compressed HTML only file for deployment
+21. Add Meta Tags for HTML
 
 ### For Browser
 1. Update the theme
