@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'ShortStack';
+  src: url('ShortStack-Regular.ttf')  format('truetype')
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html, body, .m {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.h {
+    display: none !important;
+}
+.t {
+    font-family: fantasy;
+    font-size: 2em;
+}
+.t> p {
+    margin: 0.7em;
+}
+div.horizontal {
+    display: flex;
+    justify-content: center;
+}
+div.vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.splash {
+    border: 1vh solid crimson;
+    transition: background-color 0.5s ease;
+}
+.settings {
+    text-align: left;
+    line-height: 1.3em;
+    font-family: "ShortStack", cursive, sans-serif;
+}
+
+.settings .section {
+    float: left;
+}
+
+.settings .section>div {
+    line-height: 1.8em;
+    color: grey;
+    cursor: pointer;
+}
+
+.settings .section>h4 {
+    margin: 0.2em 0;
+}
+
+.settings .section>div.selected {
+    display: inline-block;
+    color: crimson;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.logo {
+    margin: 0 auto;
+    display: inline-block;
+    -webkit-animation: spin 8s linear infinite;
+    -moz-animation: spin 8s linear infinite;
+    animation: spin 8s linear infinite;
+}
+.logo>div {
+    float: left;
+}
+.logo>div>div {
+    color: cornsilk;
+}
+.start {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    background-color: crimson;
+    font-family: "ShortStack", cursive, sans-serif;
+}
+.c, .s, .sp {
+    transition: background-color 0.5s ease;
+}
+
+.instruction{
+  clear: both;
+  display: block;
+  font-size: 0.6em;
+  font-family: "ShortStack", cursive, sans-serif;
+}
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* Portrait */
+
+@media screen and (orientation:portrait) {
+    .s {
+        font-size: 100vw;
+    }
+    .logo {
+        width: 30vw;
+        height: 30vw;
+        margin: 10vw auto;
+    }
+    .logo>div {
+        width: 15vw;
+        height: 15vw;
+    }
+    .logo>div>div {
+        font-size: 10vw;
+    }
+    .settings {
+        margin: 0 10vw;
+    }
+    .start {
+        padding: 4vw;
+    }
+    .settings .section {
+        width: 50%;
+        text-align: left;
+        margin-bottom: 3vw;
+    }
+    .settings .section:nth-child(2n){
+      text-align: right;
+    }
+
+}
+
+/* Landscape */
+
+@media screen and (orientation:landscape) {
+    .s {
+        font-size: 100vh;
+    }
+    .logo {
+        width: 30vh;
+        height: 30vh;
+        margin: 10vh auto;
+    }
+    .logo>div {
+        width: 15vh;
+        height: 15vh;
+    }
+    .logo>div>div {
+        font-size: 10vh;
+    }
+    .start {
+        padding: 2vh;
+    }
+    .settings {
+        margin: 0 10vh;
+    }
+    .settings .section {
+        width: 25%;
+        text-align: left;
+        margin-bottom: 10vh;
+    }
+    .settings .section:nth-child(3),
+    .settings .section:nth-child(4)
+    {
+      text-align: right;
+    }
+}

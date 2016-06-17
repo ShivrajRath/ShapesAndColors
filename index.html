@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,target-densitydpi=device-dpi, user-scalable=no" />
+    <meta name="MobileOptimized" content="width">
+    <meta name="description" content="Colors and Shapes">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="keywords" content="">
+    <link rel="apple-touch-icon" sizes="57x57" href="./manifest/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./manifest/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./manifest/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./manifest/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./manifest/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./manifest/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./manifest/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./manifest/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./manifest/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./manifest/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./manifest/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./manifest/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./manifest/favicon-16x16.png">
+    <link rel="manifest" href=".manifest/manifest.json">
+    <meta name="msapplication-navbutton-color" content="#ED143D">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ED143D">
+    <meta name="msapplication-TileColor" content="#ED143D">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ED143D">
+
+    <title>Colors and Shapes</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div class="m splash" id="splash" style="background-color: lightyellow">
+        <div class="logo">
+            <div style="background-color: tomato">
+                <div>&#9787;</div>
+            </div>
+            <div style="background-color: deepskyblue">
+                <div>&#9650;</div>
+            </div>
+            <div style="background-color: forestgreen">
+                <div>&#9728;</div>
+            </div>
+            <div style="background-color: sandybrown">
+                <div>&#9730;</div>
+            </div>
+        </div>
+
+        <div class="settings">
+            <div class="section" id="sec_clr">
+                <h4 style="color: tomato">COLOR</h4>
+                <div data-val="rgb">RGB</div>
+                <div data-val="rainbow">RAINBOW</div>
+                <div data-val="multi">MULTI</div>
+            </div>
+            <div class="section" id="sec_shape">
+                <h4 style="color: deepskyblue">SHAPE</h4>
+                <div data-val="colors">COLORS</div>
+                <div data-val="default">DEFAULT</div>
+                <div data-val="geometry">GEOMETRY</div>
+            </div>
+            <div class="section" id="sec_transition">
+                <h4 style="color: forestgreen">TRANSITION</h4>
+                <div data-val="2000">2 SEC</div>
+                <div data-val="3000">3 SEC</div>
+                <div data-val="5000">5 SEC</div>
+            </div>
+            <div class="section" id="sec_sound">
+                <h4 style="color: sandybrown">SOUND</h4>
+                <div data-val="mute">MUTE</div>
+                <div data-val="buddy">BUDDY</div>
+                <div data-val="sunny">SUNNY</div>
+            </div>
+        </div>
+        <p class="instruction">
+          <small>Tap twice to come back to the main page</small>
+        </p>
+
+        <div class="start" id="btnStart">
+            <h4>START</h4>
+        </div>
+
+    </div>
+
+    <div class="m horizontal h" id="sp">
+        <div class="vertical">
+            <div class="s" id="s" style="color: red">&#9787;</div>
+        </div>
+    </div>
+
+    <div class="m c h" id="c" style="background-color: red"></div>
+
+    <script src="app.js"></script>
+</body>
