@@ -21,7 +21,7 @@
     <preference name="orientation" value="portrait" />
     <preference name="fullscreen" value="true" />
 
-    <gap:plugin name="cordova-plugin-insomnia" />
+    <plugin name="nl.x-services.plugins.insomnia" spec="4.0.1" source="pgb" />
 
     <icon src="manifest/favicon-icon-96x96.png" />
     <icon src="manifest/android-icon-36x36.png"   gap:platform="android"    gap:qualifier="ldpi" />
