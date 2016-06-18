@@ -214,7 +214,9 @@
             // Removes event listeners
             $c.removeEventListener('click', change);
             $sp.removeEventListener('click', change);
-            $gts.removeEventListener('dblclick', goToSplash);
+            // $gts.removeEventListener('dblclick', goToSplash);
+            $gts.removeEventListener('mouseup', clrTimeout);
+            $gts.removeEventListener('mousedown', gtsTimer);
 
             addClass($c, 'h');
             addClass($sp, 'h');
@@ -224,7 +226,28 @@
         }
 
         // Go to splash
-        $gts.addEventListener('dblclick', goToSplash);
+        // $gts.addEventListener('dblclick', goToSplash);
+
+        var pressTimer;
+
+        // Clears the timeout
+        function clrTimeout(){
+          clearTimeout(pressTimer);
+          // Clear timeout
+          return false;
+        }
+
+        // Go to splas after a second delay
+        function gtsTimer(){
+          // Set timeout
+          pressTimer = window.setTimeout(function() { goToSplash();},1000);
+          return false;
+        }
+
+        $gts.addEventListener('mouseup', clrTimeout);
+
+        $gts.addEventListener('mousedown', gtsTimer);
+
     }
 
     // Converts array like to array

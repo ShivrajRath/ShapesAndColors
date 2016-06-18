@@ -17,7 +17,10 @@
     -ms-user-select: none;
     /* Internet Explorer/Edge */
     user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
+
 html, body, .m {
     height: 100%;
     width: 100%;
@@ -66,8 +69,6 @@ div.vertical {
 .settings .section>div.selected {
     display: inline-block;
     color: crimson;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
 }
 .logo {
     margin: 0 auto;
