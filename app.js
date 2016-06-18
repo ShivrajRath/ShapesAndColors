@@ -131,7 +131,9 @@
 
     // Stops music
     function stopMusic() {
-        audio.pause();
+        if(audio){
+          audio.pause();
+        }
     }
 
     /**
@@ -174,6 +176,9 @@
         // Full Color Element
         var $c = document.getElementById('c');
 
+        // Go to splash div
+        var $gts = document.getElementById('gts');
+
         if (window.sec_shape === 'colors') {
             removeClass($c, 'h');
         } else {
@@ -192,7 +197,11 @@
         }
 
         if (window.sec_transition === 'ontap') {
-            $sp.addEventListener('click', change);
+            if (window.sec_shape === 'colors') {
+                $c.addEventListener('click', change);
+            } else {
+                $sp.addEventListener('click', change);
+            }
         } else {
             // Timer
             var appTimer = window.setInterval(change, window.sec_transition);
@@ -201,9 +210,11 @@
         // Go to splash screen on double click
         function goToSplash() {
             clearInterval(appTimer);
+
+            // Removes event listeners
+            $c.removeEventListener('click', change);
             $sp.removeEventListener('click', change);
-            $c.removeEventListener('dblclick', goToSplash);
-            $sp.removeEventListener('dblclick', goToSplash);
+            $gts.removeEventListener('dblclick', goToSplash);
 
             addClass($c, 'h');
             addClass($sp, 'h');
@@ -212,8 +223,8 @@
             splash();
         }
 
-        $c.addEventListener('dblclick', goToSplash);
-        $sp.addEventListener('dblclick', goToSplash);
+        // Go to splash
+        $gts.addEventListener('dblclick', goToSplash);
     }
 
     // Converts array like to array

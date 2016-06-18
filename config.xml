@@ -18,7 +18,6 @@
     </author>
 
     <preference name="permissions" value="none"/>
-    <preference name="orientation" value="portrait" />
     <preference name="fullscreen" value="true" />
 
     <plugin name="nl.x-services.plugins.insomnia" spec="4.0.1" source="pgb" />

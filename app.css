@@ -1,11 +1,22 @@
 @font-face {
-  font-family: 'ShortStack';
-  src: url('ShortStack-Regular.ttf')  format('truetype')
+    font-family: 'ShortStack';
+    src: url('ShortStack-Regular.ttf') format('truetype')
 }
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
 }
 html, body, .m {
     height: 100%;
@@ -41,28 +52,23 @@ div.vertical {
     line-height: 1.3em;
     font-family: "ShortStack", cursive, sans-serif;
 }
-
 .settings .section {
     float: left;
 }
-
 .settings .section>div {
     line-height: 1.8em;
     color: grey;
     cursor: pointer;
 }
-
 .settings .section>h4 {
     margin: 0.2em 0;
 }
-
 .settings .section>div.selected {
     display: inline-block;
     color: crimson;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
 }
-
 .logo {
     margin: 0 auto;
     display: inline-block;
@@ -89,12 +95,18 @@ div.vertical {
 .c, .s, .sp {
     transition: background-color 0.5s ease;
 }
-
-.instruction{
-  clear: both;
-  display: block;
-  font-size: 0.6em;
-  font-family: "ShortStack", cursive, sans-serif;
+.goToSplash {
+    top: 0;
+    right: 0;
+    width: 5em;
+    height: 5em;
+    position: absolute;
+}
+.instruction {
+    clear: both;
+    display: block;
+    font-size: 0.8em;
+    font-family: "ShortStack", cursive, sans-serif;
 }
 @-moz-keyframes spin {
     100% {
@@ -142,10 +154,9 @@ div.vertical {
         text-align: left;
         margin-bottom: 3vw;
     }
-    .settings .section:nth-child(2n){
-      text-align: right;
+    .settings .section:nth-child(2n) {
+        text-align: right;
     }
-
 }
 
 /* Landscape */
@@ -177,9 +188,7 @@ div.vertical {
         text-align: left;
         margin-bottom: 10vh;
     }
-    .settings .section:nth-child(3),
-    .settings .section:nth-child(4)
-    {
-      text-align: right;
+    .settings .section:nth-child(3), .settings .section:nth-child(4) {
+        text-align: right;
     }
 }
