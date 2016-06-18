@@ -1,28 +1,19 @@
-### Settings
+# Colors and Shapes
 
-1. Splash screen (With Random background-color)
-2. Sounds (5 variety)
-3. Speed of transition
-4. No shape; solid color
-5. RGB Only
-6. Full Screen
-7. Only Geometric Shape
-8. Two taps on shape screen; goes to the main screen
+Colors stimulates various regions of your kid's brain. They can improve her nervous system, heart functioning, release happy hormone and can even help in digestion. Likewise, shapes too have great impact on a human being. A circular shape triggers friendship and love, square forges strength and power and some shape power, happiness, rhythm, courage and so on.
 
-### References
+"Colors and shapes" is an observe and learn activity for your toddler. Just by seeing the changing colors and shapes, the kids learn and grow.
+
+### Features
+
+- RGB, Rainbow and Multiple Colors
+- Shapes could be Geometrical, Random abstracts or it could be only colors
+- You could play optional music to keep your kid engaged
+- Shapes change automatically or on tap of the screen
+
+### Credits
 
 1. Colors from: http://colours.neilorangepeel.com/
-2. Shapes from: http://www.w3schools.com/charsets/ref_utf_geometric.asp
-3. Favicon generated via: http://www.favicon-generator.org/
-4. Phone gap build: http://docs.build.phonegap.com/en_US/introduction_getting_started.md.html#Getting%20Started%20with%20Build
-
-### To Do
-- Test it on Chrome Desktop/iPad/Android/iPhone
-- Test JS/CSS/HTML Performance
-- Get a good title and description
-- Get android signing key
-
-### For Browser
-- Update the theme / Change the theme color (via js)
-- Set the icons
-- Appcahce Manifest / Service Worker
+2. Favicon generated via: http://www.favicon-generator.org/
+3. Shapes from: http://www.w3schools.com/charsets/ref_utf_geometric.asp
+4. Music created using 4Beats on iPad
