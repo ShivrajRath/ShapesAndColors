@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.phonegap.colorsandshapes"
@@ -16,9 +17,22 @@
         Shivraj Rath
     </author>
 
-    <platform>
-      <preference name="orientation" value="landscape" />
-      <preference name="fullscreen" value="true" />
-    </platform>
+    <preference name="permissions" value="none"/>
+    <preference name="orientation" value="landscape" />
+    <preference name="fullscreen" value="true" />
+
+    <icon src="icon.png" />
+    <icon src="manifest/android-icon-36x36.png"   gap:platform="android"    gap:qualifier="ldpi" />
+    <icon src="manifest/android-icon-48x48.png"   gap:platform="android"    gap:qualifier="mdpi" />
+    <icon src="manifest/android-icon-72x72.png"   gap:platform="android"    gap:qualifier="hdpi" />
+    <icon src="manifest/android-icon-96x96.png"  gap:platform="android"    gap:qualifier="xhdpi" />
+    <icon src="manifest/android-icon-144x144.png" platform="android" qualifier="xxhdpi" />
+    <icon src="manifest/android-icon-192x192.png" platform="android" qualifier="fr-xxhdpi" />
+
+
+    <icon src="manifest/apple-icon-57x57.png"            gap:platform="ios"        width="57" height="57" />
+    <icon src="manifest/apple-icon-72x72.png"            gap:platform="ios"        width="72" height="72" />
+    <icon src="manifest/apple-icon-114x114.png"         gap:platform="ios"        width="114" height="114" />
+    <icon src="manifest/apple-icon-144x144.png"         gap:platform="ios"        width="144" height="144" />
 
 </widget>
