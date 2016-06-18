@@ -17,19 +17,12 @@
 4. Phone gap build: http://docs.build.phonegap.com/en_US/introduction_getting_started.md.html#Getting%20Started%20with%20Build
 
 ### To Do
-8. Test it on Chrome Desktop/iPad/Android/iPhone
-10. Manifest
-11. Test JS/CSS/HTML Performance
-13. Create a test page to test all colors and shapes
-15. Change the theme color (via js)
-20. Put compressed HTML only file for deployment
-22. Get a good title and description
-24. Get android signing key
+- Test it on Chrome Desktop/iPad/Android/iPhone
+- Test JS/CSS/HTML Performance
+- Get a good title and description
+- Get android signing key
 
 ### For Browser
-1. Update the theme
-2. Set the icons
-
-### Defect
-1. Insomnia plugin is not working
-2. Remove the double click back navigation. Handle it in a different way
+- Update the theme / Change the theme color (via js)
+- Set the icons
+- Appcahce Manifest / Service Worker

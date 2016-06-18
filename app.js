@@ -212,6 +212,12 @@
 
         // Go to splash screen on double click
         function goToSplash() {
+
+            // Set default
+            $c.style['background-color'] = 'red';
+            $s.style.color = 'red';
+            $s.innerHTML = '&#9679;';
+
             clearInterval(appTimer);
 
             // Removes event listeners
