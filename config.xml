@@ -21,6 +21,7 @@
     <preference name="permissions" value="none"/>
     <preference name="orientation" value="portrait" />
     <preference name="fullscreen" value="true" />
+    <preference name="BackgroundColor" value="0xffed143d"/>
 
     <plugin name="nl.x-services.plugins.insomnia" spec="4.0.1" source="pgb" />
 
