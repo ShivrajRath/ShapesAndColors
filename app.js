@@ -1,5 +1,12 @@
 (function() {
     'use strict';
+
+    function phonegapinit(){
+      window.plugins.insomnia.keepAwake();
+    }
+
+    document.addEventListener('deviceready', phonegapinit, false);
+
     var audio;
 
     // All Shapes
@@ -175,9 +182,6 @@
         // Full Color Element
         var $c = document.getElementById('c');
 
-        // Go to splash div
-        var $gts = document.getElementById('gts');
-
         if (window.sec_shape === 'colors') {
             removeClass($c, 'h');
         } else {
@@ -213,9 +217,8 @@
             // Removes event listeners
             $c.removeEventListener('click', change);
             $sp.removeEventListener('click', change);
-            // $gts.removeEventListener('dblclick', goToSplash);
-            $gts.removeEventListener('mouseup', clrTimeout);
-            $gts.removeEventListener('mousedown', gtsTimer);
+            document.body.removeEventListener('mouseup', clrTimeout);
+            document.body.removeEventListener('mousedown', gtsTimer);
 
             addClass($c, 'h');
             addClass($sp, 'h');
@@ -223,9 +226,6 @@
             stopMusic();
             splash();
         }
-
-        // Go to splash
-        // $gts.addEventListener('dblclick', goToSplash);
 
         var pressTimer;
 
@@ -236,16 +236,15 @@
           return false;
         }
 
-        // Go to splas after a second delay
+        // Go to splash after a second delay
         function gtsTimer(){
           // Set timeout
           pressTimer = window.setTimeout(function() { goToSplash();},1000);
           return false;
         }
 
-        $gts.addEventListener('mouseup', clrTimeout);
-
-        $gts.addEventListener('mousedown', gtsTimer);
+        document.body.addEventListener('mouseup', clrTimeout);
+        document.body.addEventListener('mousedown', gtsTimer);
 
     }
 
