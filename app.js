@@ -62,12 +62,12 @@
             return lightColors[Math.floor(Math.random() * lightColors.length)];
         } else {
             if (window.sec_clr === 'rgb') {
-                if(rgbCurrent === 'red'){
-                  rgbCurrent = 'green';
-                }else if(rgbCurrent === 'green'){
-                  rgbCurrent = 'blue';
-                }else{
-                  rgbCurrent = 'red';
+                if (rgbCurrent === 'red') {
+                    rgbCurrent = 'green';
+                } else if (rgbCurrent === 'green') {
+                    rgbCurrent = 'blue';
+                } else {
+                    rgbCurrent = 'red';
                 }
                 return rgbCurrent;
             } else if (window.sce_clr === 'rainbow') {
@@ -112,18 +112,20 @@
 
     // Plays music
     function playMusic() {
-      var url = './music/'+ window.sec_sound + '.mp3';
-        if (!audio) {
-            audio = new Audio(url);
-            audio.loop = true;
+        if (window.sec_sound === 'mute') {
+            if (audio) {
+                audio.pause();
+            }
         } else {
-            audio.src = url;
-            audio.load();
-        }
-        if(window.sec_sound === 'mute'){
-          audio.pause();
-        }else{
-          audio.play();
+            var url = './music/' + window.sec_sound + '.mp3';
+            if (!audio) {
+                audio = new Audio(url);
+                audio.loop = true;
+            } else {
+                audio.src = url;
+                audio.load();
+            }
+            audio.play();
         }
     }
 
@@ -189,12 +191,17 @@
             }
         }
 
-        // Timer
-        var appTimer = window.setInterval(change, window.sec_transition);
+        if (window.sec_transition === 'ontap') {
+            $sp.addEventListener('click', change);
+        } else {
+            // Timer
+            var appTimer = window.setInterval(change, window.sec_transition);
+        }
 
         // Go to splash screen on double click
         function goToSplash() {
             clearInterval(appTimer);
+            $sp.removeEventListener('click', change);
             $c.removeEventListener('dblclick', goToSplash);
             $sp.removeEventListener('dblclick', goToSplash);
 

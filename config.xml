@@ -21,6 +21,4 @@
       <preference name="fullscreen" value="true" />
     </platform>
 
-   <plugin name="nl.x-services.plugins.insomnia"/>
-
 </widget>

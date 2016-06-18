@@ -27,6 +27,8 @@
 18. Royalty + Credit free music
 20. Put compressed HTML only file for deployment
 21. Add Meta Tags for HTML
+22. Remove non supported characters (put ios/android common characters)
+23. Remove the buddy music
 
 ### For Browser
 1. Update the theme
