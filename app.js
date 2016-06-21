@@ -1,6 +1,14 @@
 (function() {
     'use strict';
 
+    var speakConfig = {
+      amplitude: 300,
+      pitch: 60,
+      speed: 130,
+      variant: 'f5'
+    };
+
+    // Phonegap plugin initialization
     function phonegapinit(){
       window.plugins.insomnia.keepAwake();
     }
@@ -217,6 +225,7 @@
             $c.style['background-color'] = 'red';
             $s.style.color = 'red';
             $s.innerHTML = '&#9679;';
+            $sp.style['background-color'] = getRandomColor(true);
 
             clearInterval(appTimer);
 
