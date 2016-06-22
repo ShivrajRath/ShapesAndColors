@@ -106,7 +106,8 @@ div.vertical {
 .instruction {
     clear: both;
     display: block;
-    font-size: 0.8em;
+    margin: 0 2em;
+    font-size: 1em;
     font-family: "ShortStack", cursive, sans-serif;
 }
 @-moz-keyframes spin {
