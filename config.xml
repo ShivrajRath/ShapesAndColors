@@ -3,17 +3,23 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.phonegap.colorsandshapes"
-        versionCode = "11"
-        version     = "1.0.1" >
+        versionCode = "12"
+        version     = "1.0.2" >
 
     <name>Colors and Shapes</name>
 
     <description>
+      [New] Brand new life characters adds more fun to your toddlers experience. Have a great time with your baby.
+
       Colors stimulates various regions of your kid's brain. They can improve her nervous system, heart functioning, release happy hormone and can even help in digestion. Likewise, shapes too have great impact on a human being. A circular shape triggers friendship and love, square forges strength and power and some shape power, happiness, rhythm, courage and so on.
 
       "Colors and shapes" is an observe and learn activity for your toddler. Just by seeing the changing colors and shapes, the kids learn and grow.
 
-      Emoji provided free by http://emojione.com
+      1. Emoji provided free by http://emojione.com
+      2. Colors from: http://colours.neilorangepeel.com/
+      3. Favicon generated via: http://www.favicon-generator.org/
+      4. Shapes from: http://www.w3schools.com/charsets/ref_utf_geometric.asp
+      5. Music created using 4Beats (https://itunes.apple.com/us/app/4beats-music-creator/id886685363?mt=8) on iPad
     </description>
 
     <author href="https://twitter.com/shivrajrath" email="shivrajrath@gmail.com">
