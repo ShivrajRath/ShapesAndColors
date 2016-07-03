@@ -1,16 +1,9 @@
 (function() {
     'use strict';
 
-    var speakConfig = {
-      amplitude: 300,
-      pitch: 60,
-      speed: 130,
-      variant: 'f5'
-    };
-
     // Phonegap plugin initialization
-    function phonegapinit(){
-      window.plugins.insomnia.keepAwake();
+    function phonegapinit() {
+        window.plugins.insomnia.keepAwake();
     }
 
     document.addEventListener('deviceready', phonegapinit, false);
@@ -30,8 +23,7 @@
         10107, 10108, 10109, 10110, 10111, 10132, 10140, 10148, 10173
     ];
 
-    // Geometric shapes
-    var geometryShape = [9632, 9634, 9650, 9650, 9658, 9660, 9668, 9648, 9679, 9644, 9670, 9673, 9672];
+    var emojis = ["1f302", "1f351", "1f407", "1f426", "1f696", "1f319", "1f352", "1f408", "1f427", "1f951", "1f32d", "1f353", "1f409", "1f428", "1f952", "1f32e", "1f354", "1f40a", "1f429", "1f955", "1f32f", "1f355", "1f40b", "1f42a", "1f95a", "1f331", "1f35c", "1f40c", "1f42b", "1f95b", "1f332", "1f35d", "1f40d", "1f42c", "1f95c", "1f333", "1f35e", "1f40e", "1f42d", "1f95d", "1f334", "1f361", "1f40f", "1f42e", "1f95e", "1f335", "1f366", "1f410", "1f42f", "1f980", "1f336", "1f367", "1f411", "1f430", "1f981", "1f337", "1f368", "1f412", "1f431", "1f982", "1f339", "1f369", "1f413", "1f432", "1f983", "1f33a", "1f36a", "1f414", "1f433", "1f984", "1f33b", "1f36b", "1f415", "1f434", "1f985", "1f33c", "1f36c", "1f416", "1f435", "1f986", "1f33d", "1f36d", "1f417", "1f436", "1f987", "1f33f", "1f36e", "1f418", "1f437", "1f988", "1f344", "1f370", "1f419", "1f438", "1f989", "1f345", "1f379", "1f41a", "1f439", "1f98a", "1f346", "1f382", "1f41b", "1f43a", "1f98b", "1f347", "1f383", "1f41c", "1f43b", "1f98c", "1f348", "1f384", "1f41d", "1f43c", "1f98d", "1f349", "1f388", "1f41e", "1f452", "1f98e", "1f34a", "1f400", "1f41f", "1f680", "1f98f", "1f34b", "1f401", "1f420", "1f681", "1f990", "1f34c", "1f402", "1f421", "1f682", "1f991", "1f34d", "1f403", "1f422", "1f683", "1f34e", "1f404", "1f423", "1f684", "1f34f", "1f405", "1f424", "1f691", "1f350", "1f406", "1f425", "1f694"];
 
     // RGB Colors
     var rgbCurrent = 'red';
@@ -58,16 +50,11 @@
 
     // Gets a random shape
     function getRandomShape() {
-        if (window.sec_shape === 'geometry') {
-            return getRandomGeometryShape();
+        if (window.sec_shape === 'life') {
+            return './svg/' + emojis[Math.floor(Math.random() * emojis.length)] + '.svg';
         } else {
             return '&#' + shapes[Math.floor(Math.random() * shapes.length)] + ';';
         }
-    }
-
-    // Gets a random geometry shape
-    function getRandomGeometryShape() {
-        return '&#' + geometryShape[Math.floor(Math.random() * geometryShape.length)] + ';';
     }
 
     // Gets a random color
@@ -145,8 +132,8 @@
 
     // Stops music
     function stopMusic() {
-        if(audio){
-          audio.pause();
+        if (audio) {
+            audio.pause();
         }
     }
 
@@ -181,10 +168,10 @@
     function init() {
         playMusic();
 
-        // Shapes's parent
+        // Shapes's / life's parent
         var $sp = document.getElementById('sp');
 
-        // Shape Element
+        // Shape / life Element
         var $s = document.getElementById('s');
 
         // Full Color Element
@@ -193,6 +180,14 @@
         if (window.sec_shape === 'colors') {
             removeClass($c, 'h');
         } else {
+            // Life element
+            if (window.sec_shape === 'life') {
+                // Life's parent
+                $sp = document.getElementById('lp');
+
+                // Life Element
+                $s = document.getElementById('l');
+            }
             removeClass($sp, 'h');
         }
 
@@ -201,9 +196,14 @@
             if (window.sec_shape === 'colors') {
                 $c.style['background-color'] = getRandomColor();
             } else {
-                $s.style.color = getRandomColor();
-                $s.innerHTML = getRandomShape();
-                $sp.style['background-color'] = getRandomColor(true);
+                if (window.sec_shape === 'life') {
+                    $s.src = getRandomShape();
+                    $sp.style['background-color'] = 'white';
+                } else {
+                    $s.style.color = getRandomColor();
+                    $s.innerHTML = getRandomShape();
+                    $sp.style['background-color'] = getRandomColor(true);
+                }
             }
         }
 
@@ -245,17 +245,19 @@
         var pressTimer;
 
         // Clears the timeout
-        function clrTimeout(){
-          clearTimeout(pressTimer);
-          // Clear timeout
-          return false;
+        function clrTimeout() {
+            clearTimeout(pressTimer);
+            // Clear timeout
+            return false;
         }
 
         // Go to splash after a second delay
-        function gtsTimer(){
-          // Set timeout
-          pressTimer = window.setTimeout(function() { goToSplash();},1000);
-          return false;
+        function gtsTimer() {
+            // Set timeout
+            pressTimer = window.setTimeout(function() {
+                goToSplash();
+            }, 1000);
+            return false;
         }
 
         document.body.addEventListener('mouseup', clrTimeout);
@@ -269,7 +271,7 @@
     }
 
     window.sec_clr = ls('sec_clr') || "multi";
-    window.sec_shape = ls('sec_shape') || "default";
+    window.sec_shape = ls('sec_shape') || "life";
     window.sec_transition = ls('sec_transition') || "2000";
     window.sec_sound = ls('sec_sound') || "buddy";
 

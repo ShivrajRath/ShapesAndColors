@@ -96,6 +96,11 @@ div.vertical {
 .c, .s, .sp {
     transition: background-color 0.5s ease;
 }
+
+.l{
+  width: 90%;
+}
+
 .goToSplash {
     top: 0;
     right: 0;

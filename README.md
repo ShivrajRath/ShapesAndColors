@@ -16,7 +16,8 @@ Colors stimulates various regions of your kid's brain. They can improve their ne
 
 ### Credits
 
-1. Colors from: http://colours.neilorangepeel.com/
-2. Favicon generated via: http://www.favicon-generator.org/
-3. Shapes from: http://www.w3schools.com/charsets/ref_utf_geometric.asp
-4. Music created using 4Beats (https://itunes.apple.com/us/app/4beats-music-creator/id886685363?mt=8) on iPad
+1. Emoji provided free by http://emojione.com
+2. Colors from: http://colours.neilorangepeel.com/
+3. Favicon generated via: http://www.favicon-generator.org/
+4. Shapes from: http://www.w3schools.com/charsets/ref_utf_geometric.asp
+5. Music created using 4Beats (https://itunes.apple.com/us/app/4beats-music-creator/id886685363?mt=8) on iPad

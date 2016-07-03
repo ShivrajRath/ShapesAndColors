@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <meta name="MobileOptimized" content="width">
     <meta name="description" content="Colors and Shapes is an observe and learn educational app. Toddlers need to observe changing shapes and colors. Various color stimulates specific region of the brain, thereby improving the cognitive skills of your toddler">
     <meta name="HandheldFriendly" content="true">
@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="app.css">
 </head>
 
-<body>
+<body oncontextmenu="return false;">
     <div class="goToSplash" id="gts"></div>
     <div class="m splash" id="splash" style="background-color: lightyellow">
         <div class="logo">
@@ -62,8 +62,8 @@
             <div class="section" id="sec_shape">
                 <h4 style="color: deepskyblue; border-bottom: 1px solid deepskyblue;">SHAPE</h4>
                 <div data-val="colors">COLORS</div>
-                <div data-val="default">DEFAULT</div>
-                <div data-val="geometry">GEOMETRY</div>
+                <div data-val="default">GEOMETRY</div>
+                <div data-val="life">LIFE</div>
             </div>
             <div class="section" id="sec_transition">
                 <h4 style="color: forestgreen; border-bottom: 1px solid forestgreen;">TRANSITION</h4>
@@ -92,6 +92,10 @@
         <div class="vertical">
             <div class="s" id="s" style="color: red">&#9679;</div>
         </div>
+    </div>
+
+    <div class="m horizontal h" id="lp">
+      <img class="l" id="l" src="./svg/1f42c.svg" alt="">
     </div>
 
     <div class="m c h" id="c" style="background-color: red"></div>
