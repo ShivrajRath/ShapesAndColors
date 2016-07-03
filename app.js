@@ -222,8 +222,8 @@
         function goToSplash() {
 
             // Set default
-            $c.style['background-color'] = 'darkblue';
-            $s.style.color = 'red';
+            $c.style['background-color'] = 'sandybrown';
+            $s.style.color = 'darkslateblue';
             $s.innerHTML = '&#9679;';
             $sp.style['background-color'] = getRandomColor(true);
 
