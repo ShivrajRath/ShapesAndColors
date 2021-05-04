@@ -1,3 +1,6 @@
+# Install the app
+[Google Play](https://play.google.com/store/apps/details?id=com.phonegap.colorsandshapes)
+
 # Colors and Shapes
 
 Colors stimulates various regions of your kid's brain. They can improve their nervous system, heart functioning, release happy hormone and can even help in digestion. Likewise, shapes too have great impact on a human being. A circular shape triggers friendship and love, square forges strength and power and some shape power, happiness, rhythm, courage and so on.
